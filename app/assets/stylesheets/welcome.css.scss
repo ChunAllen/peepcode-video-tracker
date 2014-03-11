@@ -1,0 +1,27 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#app{
+  ul.screencasts{
+    li{
+    position: relative;
+    padding: 0.5em;
+    font-size: 25px;
+    color: red;
+    border-bottom: 1px solid #ccc;
+
+      &.watched {
+        color: green;
+      }
+      img {
+        height: 30px;
+        float: right;
+        position: absolute;
+        right: 10px;
+      }
+    }
+
+  }
+}
