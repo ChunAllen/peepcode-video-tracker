@@ -4,6 +4,12 @@
 
 
 #app{
+  .instructions{
+    p{
+      font-style:italic !important;
+    }
+  }
+
   ul.screencasts{
     li{
     position: relative;
@@ -11,7 +17,7 @@
     font-size: 25px;
     color: red;
     border-bottom: 1px solid #ccc;
-
+    cursor: pointer;
       &.watched {
         color: green;
       }

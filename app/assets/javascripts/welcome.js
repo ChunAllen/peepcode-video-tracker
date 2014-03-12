@@ -30,6 +30,7 @@ $(document).ready(function(){
           $(view.el).addClass("watched");
         }
         $("ul.screencasts").append(view.render());
+        $("img.cover").attr("src", model.get("image"));
       });
     }
   });
@@ -41,7 +42,6 @@ $(document).ready(function(){
     events : {
       "click" : "toggleWatched"
     },
-
     toggleWatched : function(){
       if (this.model.get("watched") == true){
         this.model.set({ 'watched' : false}).save();
@@ -52,7 +52,7 @@ $(document).ready(function(){
     },
     render : function(){
       // calling the passed model
-      return $(this.el).text(this.model.get("title"));
+      return $(this.el).text(this.model.get("title")).append("<img class='cover'></img>");
     }
   });
 
